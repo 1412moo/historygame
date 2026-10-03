@@ -21,6 +21,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import voice_compare as vc  # noqa: E402  (http, tc_headers, TC 재사용)
+import cache_bust  # noqa: E402  (lines.js 가 바뀌면 index.html 의 ?v= 도 갱신)
 
 ROOT = vc.ROOT
 STORY = ROOT / "js" / "story.js"
@@ -176,12 +177,15 @@ def generate():
 
 def manifest():
     lines = json.loads(LIST_FILE.read_text(encoding="utf-8"))
-    data = [{"text": ln["text"], "audio": f"audio/voice/{ln['id']}.mp3", "speaker": ln["speaker"], "voice": VOICES[ln["speaker"]][1]}
+    # ?v= 는 MP3 내용 기준 버전: 같은 이름으로 다시 만들어도 휴대폰이 예전 파일(Pages 10분 캐시)을 쓰지 않게 한다
+    data = [{"text": ln["text"], "audio": f"audio/voice/{ln['id']}.mp3?v={cache_bust.file_version(OUT / (ln['id'] + '.mp3'))}",
+             "speaker": ln["speaker"], "voice": VOICES[ln["speaker"]][1]}
             for ln in lines if (OUT / f"{ln['id']}.mp3").exists()]
     (OUT / "lines.js").write_text(
         "// 게임 대사 음성 (Typecast로 개발 중에 미리 만든 MP3). tools/typecast_game_voice.py 가 만든 파일 — 직접 고치지 마세요.\n"
         "window.TT_VOICE_LINES = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n", encoding="utf-8")
     print(f"audio/voice/lines.js: {len(data)} / {len(lines)}개 연결")
+    cache_bust.main()
 
 
 if __name__ == "__main__":

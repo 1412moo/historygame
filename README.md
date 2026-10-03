@@ -12,6 +12,8 @@ python -m http.server 8123
 또는 `index.html` 을 더블클릭해도 실행됩니다.
 
 GitHub Pages: 이 폴더를 그대로 올리고 Pages를 켜면 됩니다. 빌드 단계는 없습니다.
+JS·CSS를 고친 뒤에는 커밋 전에 `python tools/cache_bust.py` 를 실행하세요. `index.html` 의 `?v=` 버전이 갱신되어,
+휴대폰이 Pages 캐시(10분)에 남은 예전 파일을 쓰지 않습니다. 음성을 다시 만들 때는 `typecast_game_voice.py` 가 자동으로 실행합니다.
 
 ## 조작
 - 이동: 방향키 / WASD (Shift: 달리기)
