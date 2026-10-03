@@ -1,0 +1,67 @@
+[
+  {
+    "id": "sejong_daniel", "speaker": "sejong", "label": "세종대왕 ① Daniel", "in_game": true,
+    "text": "그래서 결심하였다. 백성들이 자신의 생각을 글로 표현할 수 있도록, 누구나 쉽게 배우는 새로운 글자를 만들고 싶구나.",
+    "voice_id": "owbiGBW4rEJjmY5Xvwwx", "public_owner_id": "dcde68f59590c962ad195f5f948b6cd3c0302f0b44a5a5343a97083043e6ec3f",
+    "voice_name": "Daniel - Calm, Mature male, Deep",
+    "voice_settings": { "stability": 0.6, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 0.92 },
+    "note": "차분하고 깊은 중년 남성 · 조금 느리게"
+  },
+  {
+    "id": "sejong_rei", "speaker": "sejong", "label": "세종대왕 ② Rei (비교용)", "in_game": false,
+    "text": "그래서 결심하였다. 백성들이 자신의 생각을 글로 표현할 수 있도록, 누구나 쉽게 배우는 새로운 글자를 만들고 싶구나.",
+    "voice_id": "nw7o9nqXCkQKoAs59z99", "public_owner_id": "0cfc599e57ad3170a868f79480dc5e1665390b58bf9da1029d19571a9f06badb",
+    "voice_name": "Rei - Deep, Rich, Drama",
+    "voice_settings": { "stability": 0.6, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 0.92 },
+    "note": "깊고 풍성한 노년 남성"
+  },
+  {
+    "id": "jang_clamon", "speaker": "jang", "label": "장영실 Clamon", "in_game": true,
+    "text": "전하께서 보내신 아이로구나. 나는 장영실이라 한다.",
+    "voice_id": "WXwRayfQq3D3Kys5yMx9", "public_owner_id": "3174d202d73afbca841dfcafc77584252ccb2b968c2f5d86ece1255b35436818",
+    "voice_name": "Clamon - Passionate & Friendly",
+    "voice_settings": { "stability": 0.5, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 1.04 },
+    "note": "밝고 겸손한 젊은 남성 · 약간 빠르게"
+  },
+  {
+    "id": "merchant_jiwook", "speaker": "merchant", "label": "상인 Jiwook Park", "in_game": true,
+    "text": "에휴... 이 장부를 읽고 싶은데, 글을 배우기가 너무 어렵구나.",
+    "voice_id": "G81rjsHrn7FXPCNF2yuG", "public_owner_id": "651a2ab3aa2f6526cb98f59ab7b5a739c13eccff098899514a55cefec77bfe04",
+    "voice_name": "Jiwook Park",
+    "voice_settings": { "stability": 0.45, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 1.0 },
+    "note": "친근한 중년 남성"
+  },
+  {
+    "id": "farmer_namin", "speaker": "farmer", "label": "농부 Na-Min", "in_game": true,
+    "text": "끙... 얘야, 저 옆에 붙은 '방(榜)'에 뭐라고 적혀 있는지 아니?",
+    "tts_text": "끙... 얘야, 저 옆에 붙은 방에 뭐라고 적혀 있는지 아니?",
+    "voice_id": "EJOEhno8C82PxeIL91bX", "public_owner_id": "1b7bdc44133e6fc59b4bff42a3a804b1750c271b5ebf60f1de500e1591652f5c",
+    "voice_name": "Na-Min",
+    "voice_settings": { "stability": 0.5, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 0.95 },
+    "note": "소박하고 느긋한 중년 남성"
+  },
+  {
+    "id": "mother_sara", "speaker": "mother", "label": "어머니 Sara Kim", "in_game": true,
+    "text": "우리 아들이 먼 고을로 일하러 떠났단다.",
+    "voice_id": "xyE2KXhy5mfTGV7xRXpD", "public_owner_id": "58a267f568dabdb755f4986221569da412d87fc7cae85953ba6509eda9a29276",
+    "voice_name": "Sara Kim - Warm Korean Narrator",
+    "voice_settings": { "stability": 0.5, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 0.97 },
+    "note": "따뜻하고 부드러운 중년 여성"
+  },
+  {
+    "id": "child_onadot", "speaker": "girl", "label": "시장 아이 OnaDot", "in_game": true,
+    "text": "나도 글을 읽고 싶어!",
+    "voice_id": "pB7oWYX9EdaK4jiH8N3J", "public_owner_id": "739bed7c4c7bcf8e472d594a853f2401153822a2d07937e2c8a1acad7816540d",
+    "voice_name": "OnaDot",
+    "voice_settings": { "stability": 0.45, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 1.0 },
+    "note": "어린이 음성이 없어 가장 귀여운 젊은 여성 음성"
+  },
+  {
+    "id": "device_yuna", "speaker": "device", "label": "똑딱이 Yuna", "in_game": true,
+    "text": "시간 조각은 이 시대의 중요한 사건 속에 숨어 있어.",
+    "voice_id": "ajfBUI2mmJMjvf2H6Yw7", "public_owner_id": "b452923c8f29eae99dbdd2e651605884b524ab20d1fe8674db1c00dcd79fbcd2",
+    "voice_name": "Yuna",
+    "voice_settings": { "stability": 0.5, "similarity_boost": 0.75, "style": 0.0, "use_speaker_boost": true, "speed": 1.03 },
+    "note": "밝고 생기 있는 젊은 여성"
+  }
+]

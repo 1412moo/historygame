@@ -1,0 +1,6 @@
+# 비밀값·로컬 설정은 올리지 않음
+.env
+.env.*
+*.key
+__pycache__/
+.claude/

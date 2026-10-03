@@ -1,0 +1,139 @@
+[
+  {
+    "id": "sejong_bill",
+    "speaker": "sejong",
+    "label": "세종대왕 ① Bill",
+    "in_game": true,
+    "text": "그래서 결심하였다. 백성들이 자신의 생각을 글로 표현할 수 있도록, 누구나 쉽게 배우는 새로운 글자를 만들고 싶구나.",
+    "voice_id": "pqHfZKP75CvOlQylNhV4",
+    "voice_name": "Bill - Wise, Mature, Balanced",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "note": "ElevenLabs 기본 음성 (다국어 모델로 한국어 발화)"
+  },
+  {
+    "id": "sejong_george",
+    "speaker": "sejong",
+    "label": "세종대왕 ② George (비교용)",
+    "in_game": false,
+    "text": "그래서 결심하였다. 백성들이 자신의 생각을 글로 표현할 수 있도록, 누구나 쉽게 배우는 새로운 글자를 만들고 싶구나.",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "voice_name": "George - Warm, Captivating Storyteller",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+    },
+    "note": "ElevenLabs 기본 음성 (다국어 모델로 한국어 발화)"
+  },
+  {
+    "id": "jang_liam",
+    "speaker": "jang",
+    "label": "장영실 Liam",
+    "in_game": true,
+    "text": "전하께서 보내신 아이로구나. 나는 장영실이라 한다.",
+    "voice_id": "TX3LPaxmHKxFdv7VOQHJ",
+    "voice_name": "Liam - Energetic",
+    "voice_settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.04
+    },
+    "note": "ElevenLabs 기본 음성 (다국어 모델로 한국어 발화)"
+  },
+  {
+    "id": "merchant_will",
+    "speaker": "merchant",
+    "label": "상인 Will",
+    "in_game": true,
+    "text": "에휴... 이 장부를 읽고 싶은데, 글을 배우기가 너무 어렵구나.",
+    "voice_id": "bIHbv24MWmeRgasZH58o",
+    "voice_name": "Will - Relaxed Optimist",
+    "voice_settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+    },
+    "note": "ElevenLabs 기본 음성 (다국어 모델로 한국어 발화)"
+  },
+  {
+    "id": "farmer_roger",
+    "speaker": "farmer",
+    "label": "농부 Roger",
+    "in_game": true,
+    "text": "끙... 얘야, 저 옆에 붙은 '방(榜)'에 뭐라고 적혀 있는지 아니?",
+    "tts_text": "끙... 얘야, 저 옆에 붙은 방에 뭐라고 적혀 있는지 아니?",
+    "voice_id": "CwhRBWXzGAHq8TQ4Fs17",
+    "voice_name": "Roger - Laid-Back, Casual",
+    "voice_settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+    },
+    "note": "ElevenLabs 기본 음성 (다국어 모델로 한국어 발화)"
+  },
+  {
+    "id": "mother_sarah",
+    "speaker": "mother",
+    "label": "어머니 Sarah",
+    "in_game": true,
+    "text": "우리 아들이 먼 고을로 일하러 떠났단다.",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "voice_name": "Sarah - Mature, Reassuring",
+    "voice_settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.97
+    },
+    "note": "ElevenLabs 기본 음성 (다국어 모델로 한국어 발화)"
+  },
+  {
+    "id": "child_jessica",
+    "speaker": "girl",
+    "label": "시장 아이 Jessica",
+    "in_game": true,
+    "text": "나도 글을 읽고 싶어!",
+    "voice_id": "cgSgspJ2msm6clMCkdW9",
+    "voice_name": "Jessica - Playful, Bright, Warm",
+    "voice_settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+    },
+    "note": "ElevenLabs 기본 음성 (다국어 모델로 한국어 발화)"
+  },
+  {
+    "id": "device_laura",
+    "speaker": "device",
+    "label": "똑딱이 Laura",
+    "in_game": true,
+    "text": "시간 조각은 이 시대의 중요한 사건 속에 숨어 있어.",
+    "voice_id": "FGY2WhTYpPnrIDTdsKH5",
+    "voice_name": "Laura - Enthusiast, Quirky",
+    "voice_settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.03
+    },
+    "note": "ElevenLabs 기본 음성 (다국어 모델로 한국어 발화)"
+  }
+]

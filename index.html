@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>시간여행자 - 세종대왕과 훈민정음의 비밀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud" class="hidden">
+  <div id="hud-left">
+    <div id="shards" title="시간 조각">⏳ <b id="shard-count">0</b><span class="goal">/50</span></div>
+    <div id="objective"></div>
+  </div>
+  <div id="hud-right">
+    <button id="btn-dex" title="역사 도감 (B)">📖<span>도감</span></button>
+    <button id="btn-map" title="지도 (M)">🗺️<span>지도</span></button>
+    <button id="btn-menu" title="설정">⚙️<span>설정</span></button>
+  </div>
+</div>
+
+<div id="zone-banner"></div>
+
+<div id="touch" class="hidden">
+  <div id="dpad">
+    <button data-dir="3" class="up">▲</button>
+    <button data-dir="1" class="left">◀</button>
+    <button data-dir="2" class="right">▶</button>
+    <button data-dir="0" class="down">▼</button>
+  </div>
+  <button id="btn-a">A<small>말걸기</small></button>
+</div>
+
+<div id="dialog" class="hidden">
+  <div id="dlg-portrait"><canvas width="132" height="132"></canvas></div>
+  <div id="dlg-body">
+    <div id="dlg-name"></div><button id="dlg-replay" title="다시 듣기">🔊</button>
+    <div id="dlg-text"></div>
+    <div id="dlg-choices"></div>
+    <div id="dlg-next">▼</div>
+  </div>
+</div>
+
+<div id="modal"></div>
+<div id="narration" class="hidden"><div id="narr-text"></div><div id="narr-hint">화면을 누르거나 스페이스바를 누르세요</div></div>
+<div id="toasts"></div>
+<div id="fade"></div>
+
+<div id="title-screen">
+  <div class="title-box">
+    <div class="title-clock">⏳</div>
+    <h1>시간여행자</h1>
+    <p class="subtitle">세종대왕과 훈민정음의 비밀</p>
+    <div class="title-buttons">
+      <button id="btn-continue" class="big hidden">▶ 이어하기</button>
+      <button id="btn-new" class="big">✨ 새로 시작하기</button>
+    </div>
+    <p class="controls-help">이동: 방향키 / WASD &nbsp;·&nbsp; 말걸기·확인: 스페이스 / 엔터<br>도감: B &nbsp;·&nbsp; 지도: M &nbsp;·&nbsp; 달리기: Shift</p>
+    <p class="controls-help">대사 음성: Typecast (typecast.ai)</p>
+  </div>
+</div>
+
+<!-- 미리 만든 ElevenLabs 음성 (로컬 MP3 · 게임 중 API 호출 없음) -->
+<script src="audio/voice-samples/elevenlabs/samples.js"></script>
+<script src="audio/voice/lines.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/art.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/minigames.js"></script>
+<script src="js/story.js"></script>
+<script src="js/game.js"></script>
+<!-- 개발용 음성 비교 패널 (?dev 일 때만 표시) -->
+<script src="audio/voice-samples/compare.js"></script>
+<script src="js/voice-samples.js"></script>
+</body>
+</html>

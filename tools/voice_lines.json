@@ -1,0 +1,363 @@
+[
+  {
+    "id": "sejong_resolve",
+    "npc": "sejong",
+    "label": "세종대왕 — 새 글자를 결심하며",
+    "text": "그래서 결심하였다. 백성들이 자신의 생각을 글로 표현할 수 있도록, 누구나 쉽게 배우는 새로운 글자를 만들고 싶구나.",
+    "prev": "그래서 백성들이 하고 싶은 말이 있어도, 끝내 제 뜻을 글로 펴지 못하는 이가 많구나. 나는 이것이 늘 마음이 아팠다.",
+    "next": "좋다! 집현전으로 가 보거라. 학자들과 함께 말소리를 연구하고 있단다.",
+    "typecast": {
+      "gender": "male",
+      "age": [
+        "elder",
+        "middle_age"
+      ],
+      "emotion": "smart",
+      "why": "백성을 걱정하다 결심을 밝히는 장면 — 앞뒤 문맥으로 차분한 결의를 추론",
+      "query": "calm, dignified, warm elderly Korean man, like a wise king, slow and low",
+      "voice_id": "tc_67e38d8c771b5511659c4534",
+      "voice_name": "종대 Jongdae",
+      "audition": {
+        "prev": "장사하는 이가 제 장부도 읽지 못하니, 속아도 알 길이 없겠구나... 우리말은 중국말과 달라서, 한자로는 우리말을 그대로 적기가 어렵단다. 그래서 백성들이 하고 싶은 말이 있어도, 끝내 제 뜻을 글로 펴지 못하는 이가 많구나. 나는 이것이 늘 마음이 아팠다.",
+        "next": "좋다! 집현전으로 가 보거라. 학자들과 함께 말소리를 연구하고 있단다. 새 글자의 비밀을 직접 풀어 보아라.",
+        "voices": [
+          {
+            "voice_id": "tc_60ad08c829e878c3c7d73965",
+            "voice_name": "창배 Changbae",
+            "slug": "changbae",
+            "why": "노년 남성 · \"차분한 지혜, 깊은 확신\" 추천 1위"
+          },
+          {
+            "voice_id": "tc_675a73eb789ff3ea6cc80235",
+            "voice_name": "권일 Kwonil",
+            "slug": "kwonil",
+            "why": "노년 남성 · 오디오북/스토리텔링 — 평이한 낭독보다 이야기하듯"
+          },
+          {
+            "voice_id": "tc_61945d9c2c11c2c9fd934340",
+            "voice_name": "일호 Ilho",
+            "slug": "ilho",
+            "why": "노년 남성 · 게임/애니 — 표현력 있는 캐릭터 음성"
+          }
+        ]
+      }
+    },
+    "gemini": {
+      "voice": "Sadaltager",
+      "style": "As a Joseon-dynasty Korean king: calm, low and dignified, with quiet resolve and warmth for his people. Unhurried, formal classical delivery; no modern casual intonation, no exaggeration."
+    },
+    "edge": {
+      "voice": "ko-KR-InJoonNeural",
+      "rate": "-12%",
+      "pitch": "-8Hz"
+    }
+  },
+  {
+    "id": "sejong_name",
+    "npc": "sejong",
+    "label": "세종대왕 — 훈민정음 이름 짓기",
+    "text": "나는 이 글자를 '훈민정음'이라 부르겠다.",
+    "prev": "그렇다! 스물여덟 자만 익히면 누구나 자기 말을 글로 쓸 수 있지.",
+    "next": "'백성을 가르치는 바른 소리'라는 뜻이니라.",
+    "typecast": {
+      "gender": "male",
+      "age": [
+        "elder",
+        "middle_age"
+      ],
+      "emotion": "smart",
+      "why": "새 글자의 이름을 선포하는 위엄 있는 순간",
+      "query": "calm, dignified, warm elderly Korean man, like a wise king, slow and low",
+      "voice_id": "tc_67e38d8c771b5511659c4534",
+      "voice_name": "종대 Jongdae"
+    },
+    "gemini": {
+      "voice": "Sadaltager",
+      "style": "A Joseon king solemnly proclaiming the name of a new script: dignified, steady and proud, slow and clear, slight pause before the name."
+    },
+    "edge": {
+      "voice": "ko-KR-InJoonNeural",
+      "rate": "-12%",
+      "pitch": "-8Hz"
+    },
+    "elevenlabs": {
+      "voice_id": "pqHfZKP75CvOlQylNhV4",
+      "voice_name": "Bill - Wise, Mature, Balanced",
+      "voice_settings": {
+        "stability": 0.6,
+        "similarity_boost": 0.75,
+        "style": 0.0,
+        "use_speaker_boost": true,
+        "speed": 0.92
+      }
+    }
+  },
+  {
+    "id": "jang_intro",
+    "npc": "jang",
+    "label": "장영실 — 첫 만남",
+    "text": "전하께서 보내신 아이로구나. 나는 장영실이라 한다.",
+    "prev": "",
+    "next": "해시계는 해가 있을 때만 시간을 알려 주지. 그럼 밤이나 흐린 날엔 어떻게 시간을 알 수 있을까?",
+    "typecast": {
+      "gender": "male",
+      "age": [
+        "young_adult",
+        "middle_age"
+      ],
+      "emotion": "smart",
+      "why": "호기심 많은 과학자가 반갑게 아이를 맞음",
+      "query": "bright, curious, friendly young adult Korean man, slightly fast, humble inventor",
+      "voice_id": "tc_63c76c6a1c6413ff949de534",
+      "voice_name": "호식 Hosik",
+      "audition": {
+        "prev": "장영실이라면 내 고장도 고칠 수 있을지 몰라! 가 보자!",
+        "next": "해시계는 해가 있을 때만 시간을 알려 주지. 그럼 밤이나 흐린 날엔 어떻게 시간을 알 수 있을까?",
+        "voices": [
+          {
+            "voice_id": "tc_68662745779b66ba84fc4d84",
+            "voice_name": "세헌 Seheon",
+            "slug": "seheon",
+            "why": "청년 남성 · 대화체 — \"밝고 호기심 많은\" 두 검색 모두 상위"
+          },
+          {
+            "voice_id": "tc_63c76c7f0a9ab6c54f4d36bd",
+            "voice_name": "도한 Dohan",
+            "slug": "dohan",
+            "why": "청년 남성 · \"밝고 지적인 청년\" 추천 1위"
+          },
+          {
+            "voice_id": "tc_636b1d93b58379d5c6b6aef7",
+            "voice_name": "상훈 Sanghoon",
+            "slug": "sanghoon",
+            "why": "청년 남성 · 설명/강의용 — 지적인 장인·과학자 느낌"
+          }
+        ]
+      }
+    },
+    "gemini": {
+      "voice": "Puck",
+      "style": "A bright, curious Joseon inventor greeting a child warmly: friendly, lively, slightly quick, humble and kind."
+    },
+    "edge": {
+      "voice": "ko-KR-HyunsuMultilingualNeural",
+      "rate": "+5%",
+      "pitch": "+0Hz"
+    }
+  },
+  {
+    "id": "merchant_ledger",
+    "npc": "merchant",
+    "label": "상인 — 장부를 못 읽는 한숨",
+    "text": "에휴... 이 장부를 읽고 싶은데, 글을 배우기가 너무 어렵구나.",
+    "prev": "",
+    "next": "지금 쓰는 글은 '한자'란다. 글자마다 뜻이 달라서 수천 자를 외워야 하지.",
+    "typecast": {
+      "gender": "male",
+      "age": [
+        "middle_age"
+      ],
+      "emotion": "smart",
+      "why": "평소엔 넉살 좋은 상인이 답답해 한숨 쉬는 대사",
+      "query": "friendly, lively middle-aged Korean man, market merchant, casual",
+      "voice_id": "tc_681c180fcc90c099ccc79aeb",
+      "voice_name": "영목 Youngmok",
+      "audition": {
+        "prev": "",
+        "next": "지금 쓰는 글은 '한자'란다. 글자마다 뜻이 달라서 수천 자를 외워야 하지. 농사짓고 장사하느라 바쁜 우리 같은 백성은 배울 틈이 없단다.",
+        "voices": [
+          {
+            "voice_id": "tc_606c6c684085209e5555abb0",
+            "voice_name": "곽두필 Dupil",
+            "slug": "dupil",
+            "why": "중년 남성 · 대화체 — 생활감 있는 동네 아저씨 말투 기대"
+          },
+          {
+            "voice_id": "tc_636b1d81b58379d5c6b6aeeb",
+            "voice_name": "정봉 Jungbong",
+            "slug": "jungbong",
+            "why": "중년 남성 · 대화체 — 과장 없는 일상 대화"
+          },
+          {
+            "voice_id": "tc_694395d43f2c8d9d43e9a897",
+            "voice_name": "병훈 Byunghun (2차)",
+            "slug": "byunghun",
+            "why": "중년 · 대화체/쇼츠 — \"시장에서 장사하는 친근한 아저씨\" 추천 중 유일한 중년"
+          },
+          {
+            "voice_id": "tc_656059db8edf4b53b4f35990",
+            "voice_name": "장호 Jangho (2차)",
+            "slug": "jangho",
+            "why": "중년 · 대화체 전용 — 방송·나레이션 용도가 없는 생활 대화 음성"
+          },
+          {
+            "voice_id": "tc_63aaebf1cef3e7d6ce6d3628",
+            "voice_name": "김반장 Sheriff Kim (2차)",
+            "slug": "sheriffkim",
+            "why": "중년 · 게임 캐릭터 음성 — 영목보다 캐릭터성"
+          }
+        ]
+      }
+    },
+    "gemini": {
+      "voice": "Achird",
+      "style": "A good-natured market merchant sighing in frustration: a real sigh at the start, friendly but troubled, natural everyday Korean speech."
+    },
+    "edge": {
+      "voice": "ko-KR-InJoonNeural",
+      "rate": "+6%",
+      "pitch": "+3Hz"
+    }
+  },
+  {
+    "id": "farmer_notice",
+    "npc": "farmer",
+    "label": "농부 — 방(榜)을 가리키며",
+    "text": "끙... 얘야, 저 옆에 붙은 '방(榜)'에 뭐라고 적혀 있는지 아니?",
+    "tts_text": "끙... 얘야, 저 옆에 붙은 방에 뭐라고 적혀 있는지 아니?",
+    "prev": "",
+    "next": "나라에서 백성들에게 알릴 것이 있으면 저렇게 글로 써서 붙인단다. 그런데 나는 글을 몰라서 읽을 수가 없어.",
+    "typecast": {
+      "gender": "male",
+      "age": [
+        "middle_age",
+        "elder"
+      ],
+      "emotion": "smart",
+      "why": "소박한 농부가 곤란해하며 아이에게 묻는 장면",
+      "query": "plain, relaxed, warm middle-aged Korean countryside man, rustic",
+      "voice_id": "tc_5c3c52c95827e00008dd7f34",
+      "voice_name": "덕춘 Duckchun",
+      "audition": {
+        "prev": "꼬불꼬불 어려운 글자가 가득하다... 하나도 읽을 수가 없다!",
+        "next": "나라에서 백성들에게 알릴 것이 있으면 저렇게 글로 써서 붙인단다. 그런데 나는 글을 몰라서 읽을 수가 없어.",
+        "voices": [
+          {
+            "voice_id": "tc_606c6c155e38f609c6789d2b",
+            "voice_name": "장태백 Taebaek",
+            "slug": "taebaek",
+            "why": "중년 남성 · 대화체 — 투박하지만 자연스러운 말투 기대"
+          },
+          {
+            "voice_id": "tc_657139d23be20e08b0e92bae",
+            "voice_name": "영걸 Yeonggeol",
+            "slug": "yeonggeol",
+            "why": "중년 남성 · 대화체 — 덕춘보다 덜 연기적인 소박한 목소리"
+          },
+          {
+            "voice_id": "tc_66860d458ca8b2dc5f72b865",
+            "voice_name": "덕환 Deokhwan (2차)",
+            "slug": "deokhwan",
+            "why": "노년 · 게임 — 덕춘과 같은 게임 캐릭터 계열의 다른 음색"
+          },
+          {
+            "voice_id": "tc_63a3d9d14b235ddd6541a78e",
+            "voice_name": "학철 Hakchul (2차)",
+            "slug": "hakchul",
+            "why": "노년 · 게임 — 소박한 시골 어르신 캐릭터 기대"
+          },
+          {
+            "voice_id": "tc_661797310ae4c893f6a25353",
+            "voice_name": "김봉만 Bongman Kim (2차)",
+            "slug": "bongman",
+            "why": "중년 · 일상 음성 — 너무 늙지 않은 투박한 생활감 기대"
+          }
+        ]
+      }
+    },
+    "gemini": {
+      "voice": "Algenib",
+      "style": "A humble, weathered country farmer, puzzled and a little embarrassed, asking a child for help: slow, plain and warm."
+    },
+    "edge": {
+      "voice": "ko-KR-HyunsuMultilingualNeural",
+      "rate": "-8%",
+      "pitch": "-4Hz"
+    }
+  },
+  {
+    "id": "mother_son",
+    "npc": "mother",
+    "label": "어머니 — 멀리 떠난 아들",
+    "text": "우리 아들이 먼 고을로 일하러 떠났단다.",
+    "prev": "",
+    "next": "보고 싶다고, 밥은 잘 먹느냐고 편지를 쓰고 싶은데...",
+    "typecast": {
+      "gender": "female",
+      "age": [
+        "middle_age"
+      ],
+      "emotion": "smart",
+      "why": "아들을 그리워하는 잔잔한 슬픔",
+      "query": "warm, soft, gentle middle-aged Korean woman, caring mother",
+      "voice_id": "tc_684a7a1446e2a628b5b07230",
+      "voice_name": "재선 Jaesun"
+    },
+    "gemini": {
+      "voice": "Sulafat",
+      "style": "A warm, gentle mother quietly missing her son who left for a faraway town: soft, a little wistful, tender."
+    },
+    "edge": {
+      "voice": "ko-KR-SunHiNeural",
+      "rate": "-5%",
+      "pitch": "+0Hz"
+    }
+  },
+  {
+    "id": "child_read",
+    "npc": "girl",
+    "label": "시장 아이 — 글을 읽고 싶어",
+    "text": "나도 글을 읽고 싶어!",
+    "prev": "",
+    "next": "그런데 서당은 양반집 아이들만 다닐 수 있고, 한자는 너무 어려워...",
+    "typecast": {
+      "gender": "female",
+      "age": [
+        "child"
+      ],
+      "emotion": "smart",
+      "why": "어린이(child) 음성으로 간절하고 밝게",
+      "query": "bright, natural young Korean child voice for a game character",
+      "voice_id": "tc_66596206b7bd6e89c3a2c54e",
+      "voice_name": "아찌 Azzi"
+    },
+    "gemini": {
+      "voice": "Leda",
+      "style": "A bright, earnest young child of about eight, eager and hopeful: high, energetic and sincere, like a real kid."
+    },
+    "edge": {
+      "voice": "ko-KR-SunHiNeural",
+      "rate": "+4%",
+      "pitch": "+25Hz"
+    }
+  },
+  {
+    "id": "device_hint",
+    "npc": "device",
+    "label": "똑딱이 — 시간 조각 안내",
+    "text": "시간 조각은 이 시대의 중요한 사건 속에 숨어 있어.",
+    "prev": "괜찮아? 여긴... 조선 시대, 세종대왕이 다스리던 한양이야!",
+    "next": "사람들을 만나서 이야기를 들어 보자.",
+    "typecast": {
+      "gender": "female",
+      "age": [
+        "teenager",
+        "young_adult"
+      ],
+      "emotion": "smart",
+      "why": "주인공을 돕는 명랑한 꼬마 시간 장치",
+      "query": "cheerful, cute, playful Korean voice for a robot sidekick game character",
+      "voice_id": "tc_663c689ada7bbd7f8f1a788a",
+      "voice_name": "로로 Roro"
+    },
+    "gemini": {
+      "voice": "Zephyr",
+      "style": "A cheerful little time-machine sidekick explaining a clue to a child: bright, playful and encouraging, clear and slightly quick."
+    },
+    "edge": {
+      "voice": "ko-KR-SunHiNeural",
+      "rate": "+8%",
+      "pitch": "+12Hz"
+    }
+  }
+]
