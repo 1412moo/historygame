@@ -1,8 +1,9 @@
 """게임 본편 대사 음성 생성기 (Typecast · 개발용 — 게임 실행 중에는 쓰이지 않음)
 
-js/story.js 에서 확정 음성이 있는 7명(세종·장영실·상인·농부·어머니·시장 아이·똑딱이)의 대사를 뽑아
-Typecast(ssfm-v30, Smart Emotion)로 MP3를 만들고, 게임이 읽는 audio/voice/lines.js 를 만든다.
-목록에 없는 대사(다른 NPC, 플레이어, 안내문, 이름이 들어가는 대사)는 기존 브라우저 읽어주기로 읽힌다.
+js/story.js 에서 확정 음성이 있는 7명(세종·장영실·상인·농부·어머니·시장 아이·똑딱이)의 대사와
+시작 나레이션(ui.narrate)을 뽑아 Typecast(ssfm-v30, Smart Emotion)로 MP3를 만들고, 게임이 읽는 audio/voice/lines.js 를 만든다.
+플레이어 이름({name})이 들어간 대사는 이름을 빼고 녹음한다. 목록에 없는 대사(다른 NPC, 플레이어, 안내문)는
+기존 브라우저 읽어주기로 읽힌다.
 
 API 키는 TYPECAST_API_KEY 환경 변수에서만 읽는다 (voice_compare.py 와 같은 attribution User-Agent 사용).
 
@@ -36,7 +37,10 @@ VOICES = {
     "mother": ("tc_684a7a1446e2a628b5b07230", "재선 Jaesun"),
     "child": ("tc_66596206b7bd6e89c3a2c54e", "아찌 Azzi"),
     "device": ("tc_663c689ada7bbd7f8f1a788a", "로로 Roro"),
+    # 나레이션 전용 (ui.narrate). 캐릭터 음성과 성별·나이대가 겹치지 않는 오디오북/스토리텔링 계열
+    "narrator": ("tc_6731b3ac075b04a944644234", "한영 Hanyoung"),
 }
+NAME = "{name}"  # 플레이어 이름 자리: 음성에서는 이름을 빼고 읽고, 게임은 이름이 들어간 화면 글자와 맞춰 재생한다
 # story.js 안의 위치(NPC id 또는 함수 이름) → `me` 가 가리키는 화자
 CONTEXT_SPEAKER = {"merchant": "merchant", "farmer": "farmer", "mother": "mother", "girl": "child",
                    "sejongTalk": "sejong", "jangTalk": "jang", "rainTalk": "jang"}
@@ -66,9 +70,12 @@ def js_strings(s):
 
 def clean(t):
     """js/voice.js 의 clean() 과 같은 규칙 (한자·이모지·괄호 기호 정리)"""
+    t = t.replace(NAME + ", ", "").replace(NAME, "")
+    t = re.sub(r"<br\s*/?>", " ", t)
+    t = re.sub(r"<[^>]+>", "", t)
     t = re.sub(r"\(\s*[㐀-鿿\s]+\)", "", t)
     t = re.sub(r"[㐀-鿿]+", "", t)
-    t = re.sub(r"[\U0001F000-\U0001FAFF☀-➿⭐️‍]", "", t)
+    t = re.sub(r"[\U0001F000-\U0001FAFF⌀-⏿☀-➿⭐️‍]", "", t)
     t = re.sub(r"[「」『』\"“”]", "", t)
     t = re.sub(r"[~—]", " ", t)
     t = re.sub(r"\(\s*\d/\d\)", "", t)
@@ -77,12 +84,24 @@ def clean(t):
 
 
 def extract():
-    ctx, groups, cur = None, [], None
+    ctx, groups, cur, narr = None, [], None, False
     for no, line in enumerate(STORY.read_text(encoding="utf-8").splitlines(), 1):
         m = re.search(r"\bid: '(\w+)'", line) or re.search(r"async function (\w+)\(", line)
         if m:
             ctx = m.group(1)
             cur = None
+        # 나레이션: ui.narrate([ ... ]) 안의 문장 (화면 글자 그대로가 대사 키)
+        if "ui.narrate([" in line:
+            narr = True
+            cur = {"ctx": "narrate", "items": []}
+            groups.append(cur)
+            continue
+        if narr:
+            if line.strip().startswith("]"):
+                narr, cur = False, None
+            else:
+                cur["items"] += [("narrator", t, no) for t in js_strings(line)]
+            continue
         call = re.search(r"say\((me|DEV),", line)
         react = ctx == "sejongTalk" and "const react" in line
         if not call and not react:
@@ -99,7 +118,7 @@ def extract():
     for g in groups:
         items = g["items"]
         for i, (spk, text, no) in enumerate(items):
-            if "{name}" in text or text in seen:  # 플레이어 이름이 들어가는 대사는 미리 녹음할 수 없음
+            if text in seen:
                 continue
             seen.add(text)
             tts = TTS_OVERRIDE.get(text, clean(text))

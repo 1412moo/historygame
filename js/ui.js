@@ -86,7 +86,7 @@
         res(i);
       };
       choiceState = { idx: 0, btns, pick, highlight };
-      TT.voice.speak(options.map((o, i) => `${i + 1}번, ${fmt(o)}`).join('. '), null, { noRemember: true });
+      // 선택지는 읽지 않는다: 고른 대사는 위 pick() 의 ui.say(TT.PLAYER, …) 에서 한 번만 읽힌다
       highlight(0);
     });
   };

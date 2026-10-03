@@ -685,6 +685,42 @@ window.TT_VOICE_LINES = [
   "voice": "로로 Roro"
  },
  {
+  "text": "{name}, 고마워! 이제 원래 시간으로 돌아갈 수 있어!",
+  "audio": "audio/voice/device_f40ae11b.mp3",
+  "speaker": "device",
+  "voice": "로로 Roro"
+ },
+ {
+  "text": "✨ 우우우웅—",
+  "audio": "audio/voice/narrator_d2836290.mp3",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung"
+ },
+ {
+  "text": "⏳ <b>시간여행에 성공했습니다.</b>",
+  "audio": "audio/voice/narrator_85ff8cb2.mp3",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung"
+ },
+ {
+  "text": "⚡ 치지직...! 하지만 <b>시간 장치가 고장났습니다.</b>",
+  "audio": "audio/voice/narrator_aae42121.mp3",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung"
+ },
+ {
+  "text": "원래 시간으로 돌아가려면<br>이 시대의 <b>⏳ 시간 조각</b>을 찾아야 합니다.",
+  "audio": "audio/voice/narrator_fc7d73af.mp3",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung"
+ },
+ {
+  "text": "{name}, 괜찮아? 여긴... 조선 시대, 세종대왕이 다스리던 한양이야!",
+  "audio": "audio/voice/device_007e7591.mp3",
+  "speaker": "device",
+  "voice": "로로 Roro"
+ },
+ {
   "text": "시간 조각은 이 시대의 중요한 사건 속에 숨어 있어.",
   "audio": "audio/voice/device_aeb2340f.mp3",
   "speaker": "device",

@@ -62,15 +62,26 @@
   // ----- 미리 녹음한 음성 파일 (Typecast·ElevenLabs 등으로 개발 중에 만든 MP3) -----
   // window.TT_VOICE_LINES (Typecast 본편 음성, audio/voice/lines.js) 를 먼저 찾고, 없으면 TT_VOICE_SAMPLES_EL 의 in_game 항목.
   // 대사 텍스트가 정확히 같으면 MP3를 재생하고, 파일이 없는 대사는 기존 브라우저 읽어주기로 그대로 읽는다. 게임 중 TTS API는 호출하지 않는다.
-  let lineMap = null;
+  // 나레이션(ui.narrate)도 화면 글자 그대로를 키로 찾는다. 플레이어 이름({name})이 들어간 대사는 이름을 빼고 녹음해 두었으므로
+  // 이름 자리를 아무 글자로 보고 맞춘다.
+  let lineMap = null, nameLines = null;
   const recorded = text => {
     if (!lineMap) {
       lineMap = new Map();
-      const add = s => { if (!lineMap.has(s.text.trim())) lineMap.set(s.text.trim(), s.audio); };
+      nameLines = [];
+      const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const add = s => {
+        const t = s.text.trim();
+        if (t.includes('{name}')) nameLines.push({ re: new RegExp('^' + t.split('{name}').map(esc).join('.+?') + '$'), audio: s.audio });
+        else if (!lineMap.has(t)) lineMap.set(t, s.audio);
+      };
       (window.TT_VOICE_LINES || []).forEach(add);
       (window.TT_VOICE_SAMPLES_EL || []).filter(s => s.in_game).forEach(add);
     }
-    return lineMap.get(String(text).trim());
+    const t = String(text).trim();
+    if (lineMap.has(t)) return lineMap.get(t);
+    const hit = nameLines.find(n => n.re.test(t));
+    return hit && hit.audio;
   };
   const player = new Audio();
   player.preload = 'auto';
