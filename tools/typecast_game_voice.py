@@ -40,11 +40,23 @@ VOICES = {
     "device": ("tc_663c689ada7bbd7f8f1a788a", "로로 Roro"),
     # 나레이션 전용 (ui.narrate). 캐릭터 음성과 성별·나이대가 겹치지 않는 오디오북/스토리텔링 계열
     "narrator": ("tc_6731b3ac075b04a944644234", "한영 Hanyoung"),
+    # 집현전 학자 대표 (scholar_head): 따뜻하고 지적인 중년 선생님 — 2026-10 오디션에서 확정
+    "scholar": ("tc_6731b2e0855f351b98d30c48", "건석 Gunseok"),
+    # 대사가 2~3줄인 NPC: 오디션 없이 1순위 후보로 생성 (2026-10 P1-1)
+    "apprentice": ("tc_64e72df02909019ec5b8acdd", "경수 Kyungsoo"),
+    "potter": ("tc_606c6c684085209e5555abb0", "곽두필 Dupil"),
+    "helper": ("tc_6059dad0b83880769a50502f", "박창수 Changsu"),
+    "grandma": ("tc_60ad0841061ee28740ec2e1c", "순이 Sooni"),
+    "boy": ("tc_6699eb3849dfac016c29444c", "시우 Siwoo"),
+    "official1": ("tc_653220349ba8419521ae8a63", "재준 Jaejun"),
+    "official2": ("tc_5fe06471a9f79e8f959be96f", "성호 Sungho"),
+    "scholar_b": ("tc_61945d9c2c11c2c9fd934340", "일호 Ilho"),
 }
 NAME = "{name}"  # 플레이어 이름 자리: 음성에서는 이름을 빼고 읽고, 게임은 이름이 들어간 화면 글자와 맞춰 재생한다
 # story.js 안의 위치(NPC id 또는 함수 이름) → `me` 가 가리키는 화자
 CONTEXT_SPEAKER = {"merchant": "merchant", "farmer": "farmer", "mother": "mother", "girl": "child",
-                   "sejongTalk": "sejong", "jangTalk": "jang", "rainTalk": "jang"}
+                   "sejongTalk": "sejong", "jangTalk": "jang", "rainTalk": "jang", "scholarTalk": "scholar",
+                   **{k: k for k in ("apprentice", "potter", "helper", "grandma", "boy", "official1", "official2", "scholar_b")}}
 # 오디션 때 확정 음성·같은 대사로 이미 만든 샘플 (voice_lines.json 의 id → 파일, 다시 생성하지 않고 복사)
 # sejong_name 은 샘플이 다른 음성(종대)이라 새로 만든다.
 REUSE = {
@@ -54,7 +66,24 @@ REUSE = {
 # 읽기만 바꾸는 대사 (화면 글자는 그대로)
 TTS_OVERRIDE = {
     "(방향키 / WASD 로 움직이고, 스페이스바로 말을 걸 수 있어!)": "방향키나 W, A, S, D 로 움직이고, 스페이스바로 말을 걸 수 있어!",
+    # 길게 끄는 소리(~)는 모음을 겹쳐 읽는다
+    "옹기 사시오~! 옹기는 숨을 쉬는 그릇이라 된장, 간장 담기에 딱이라오.": "옹기 사시오오! 옹기는 숨을 쉬는 그릇이라 된장, 간장 담기에 딱이라오.",
+    "쉬운 글자가 있으면 좋겠다~": "쉬운 글자가 있으면 좋겠다아.",
+    # 한글 교육 표현: 자모·기호는 사람이 듣는 한국어로 풀어 읽는다
+    "자, '그' 하고 소리 내 보거라. 혀뿌리가 목구멍을 막지 않느냐?": "자, 그으, 하고 소리 내 보거라. 혀뿌리가 목구멍을 막지 않느냐?",
+    "첫 번째 비밀: 소리 합치기. 자음 <b>ㄱ</b> 을 누르고, 모음 <b>ㅏ</b> 를 눌러 합쳐 보세요!":
+        "첫 번째 비밀, 소리 합치기. 자음 기역을 누르고, 모음 아를 눌러 합쳐 보세요!",
+    "두 번째 비밀: 모음 바꾸기. <b>ㅁ</b> 하나로 세 가지 소리를! 모음만 바꿔 보세요.":
+        "두 번째 비밀, 모음 바꾸기. 미음 하나로 세 가지 소리를! 모음만 바꿔 보세요.",
 }
+# 정보 카드 (ui.card): 카드 안 글자(textContent, 공백 정리)가 열쇠. 제목 문구로 카드를 찾아 읽기 텍스트를 붙인다
+CARD_TTS = {
+    "자음(닿소리)의 비밀": "자음, 닿소리의 비밀. 기역은 혀뿌리가 목구멍을 막는 모양. 니은은 혀끝이 윗잇몸에 닿는 모양. 미음은 입 모양. "
+                    "시옷은 이, 그러니까 치아 모양. 이응은 목구멍 모양. 여기에 획을 더하면 키읔, 디귿, 비읍, 지읒, 히읗 같은 글자가 생겨요!",
+    "모음(홀소리)의 비밀": "모음, 홀소리의 비밀. 둥근 점은 둥근 하늘. 모음 으는 평평한 땅. 모음 이는 서 있는 사람. "
+                    "이 셋을 합쳐 아, 어, 오, 우 같은 모음을 만들어요. 예를 들어, 이에 둥근 점을 더하면 아가 돼요.",
+}
+MINIGAMES = ROOT / "js" / "minigames.js"
 
 STR_RE = re.compile(r"'((?:[^'\\]|\\.)*)'|`((?:[^`\\]|\\.)*)`")
 
@@ -82,6 +111,27 @@ def clean(t):
     t = re.sub(r"\(\s*\d/\d\)", "", t)
     t = t.replace("( ", "(").replace("·", " ")
     return re.sub(r"\s+", " ", t).strip()
+
+
+def card_key(html):
+    """js/ui.js ui.card 와 같은 열쇠: 카드 HTML 의 textContent(태그 제거, 공백 정리). 화면 배치(innerText)와 무관하다"""
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", html)).strip()
+
+
+def extra_lines():
+    """대화가 아닌 나레이션 음성: 정보 카드(story.js ui.card)와 한글 공방 라운드 안내(minigames.js ROUNDS)"""
+    story = STORY.read_text(encoding="utf-8")
+    for m in re.finditer(r"ui\.card\(`((?:[^`\\]|\\.)*)`", story):
+        key = card_key(m.group(1))
+        tts = next((t for mark, t in CARD_TTS.items() if mark in key), None)
+        if tts:
+            yield "narrator", key, f"js/story.js:{story[:m.start()].count(chr(10)) + 1}", tts
+    mg = MINIGAMES.read_text(encoding="utf-8")
+    start = mg.index("const ROUNDS = [")
+    block = mg[start:mg.index("];", start)]
+    for m in re.finditer(r"\{ title: '([^']*)', intro: '([^']*)'", block):
+        key = f"{m.group(1)}. {m.group(2)}"  # minigames.js 가 음성에 넘기는 문자열 그대로: `${R.title}. ${R.intro}`
+        yield "narrator", key, f"js/minigames.js:{mg[:start + m.start()].count(chr(10)) + 1}", TTS_OVERRIDE.get(key, clean(key))
 
 
 def extract():
@@ -115,6 +165,8 @@ def extract():
             cur = {"ctx": ctx, "items": []}
             groups.append(cur)
         cur["items"] += [(spk, t, no) for t in texts]
+        if "return;" in line:  # `if (...) { say(...); return; }` 처럼 따로 끝나는 분기는 다음 대사와 문맥을 잇지 않는다
+            cur = None
     seen, out = set(), []
     for g in groups:
         items = g["items"]
@@ -128,6 +180,11 @@ def extract():
                   "prev": clean(items[i - 1][1]) if i > 0 else "",
                   "next": clean(items[i + 1][1]) if i + 1 < len(items) else ""}
             out.append(ln)
+    for spk, text, src, tts in extra_lines():
+        if text not in seen:
+            seen.add(text)
+            out.append({"id": f"{spk}_{hashlib.sha1(text.encode()).hexdigest()[:8]}", "speaker": spk, "text": text, "tts_text": tts,
+                        "source": src, "prev": "", "next": ""})
     LIST_FILE.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     by = {}
     for ln in out:
@@ -178,9 +235,15 @@ def generate():
 def manifest():
     lines = json.loads(LIST_FILE.read_text(encoding="utf-8"))
     # ?v= 는 MP3 내용 기준 버전: 같은 이름으로 다시 만들어도 휴대폰이 예전 파일(Pages 10분 캐시)을 쓰지 않게 한다
-    data = [{"text": ln["text"], "audio": f"audio/voice/{ln['id']}.mp3?v={cache_bust.file_version(OUT / (ln['id'] + '.mp3'))}",
+    data = []
+    for ln in lines:
+        if not (OUT / f"{ln['id']}.mp3").exists():
+            continue
+        d = {"text": ln["text"], "audio": f"audio/voice/{ln['id']}.mp3?v={cache_bust.file_version(OUT / (ln['id'] + '.mp3'))}",
              "speaker": ln["speaker"], "voice": VOICES[ln["speaker"]][1]}
-            for ln in lines if (OUT / f"{ln['id']}.mp3").exists()]
+        if ln["tts_text"] != clean(ln["text"]):
+            d["say"] = ln["tts_text"]  # 읽기 텍스트를 따로 정한 대사: MP3를 못 불러올 때 브라우저 읽어주기도 이 문장으로 읽는다
+        data.append(d)
     (OUT / "lines.js").write_text(
         "// 게임 대사 음성 (Typecast로 개발 중에 미리 만든 MP3). tools/typecast_game_voice.py 가 만든 파일 — 직접 고치지 마세요.\n"
         "window.TT_VOICE_LINES = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n", encoding="utf-8")

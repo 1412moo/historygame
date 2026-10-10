@@ -111,7 +111,11 @@
   ui.card = function (html, btn) {
     return new Promise(res => {
       const m = ui.modal(`<div class="panel card">${html}<div class="row"><button class="primary big">${btn || '알겠어요!'}</button></div></div>`);
-      TT.voice.speak(m.querySelector('.card').innerText.replace(btn || '알겠어요!', ''), null, { noRemember: true });
+      // 녹음 열쇠: 카드 HTML 의 글자(textContent, 공백 정리) — 화면 배치에 따라 달라지는 innerText 대신 쓴다
+      const box = document.createElement('div');
+      box.innerHTML = html;
+      const key = box.textContent.replace(/\s+/g, ' ').trim();
+      TT.voice.speak(TT.voice.hasRecording(key) ? key : m.querySelector('.card').innerText.replace(btn || '알겠어요!', ''), null, { noRemember: true });
       m.querySelector('.primary').onclick = () => { TT.sfx.select(); TT.voice.stop(); ui.closeModal(); res(); };
     });
   };

@@ -64,25 +64,25 @@
   // 대사 텍스트가 정확히 같으면 MP3를 재생하고, 파일이 없는 대사는 기존 브라우저 읽어주기로 그대로 읽는다. 게임 중 TTS API는 호출하지 않는다.
   // 나레이션(ui.narrate)도 화면 글자 그대로를 키로 찾는다. 플레이어 이름({name})이 들어간 대사는 이름을 빼고 녹음해 두었으므로
   // 이름 자리를 아무 글자로 보고 맞춘다.
+  // say: 화면 글자와 따로 정한 읽기 텍스트(예: ㄱ → 기역). MP3를 못 불러올 때 브라우저 읽어주기가 이 문장으로 읽는다.
   let lineMap = null, nameLines = null;
-  const recorded = text => {
+  const lookup = text => {
     if (!lineMap) {
       lineMap = new Map();
       nameLines = [];
       const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const add = s => {
-        const t = s.text.trim();
-        if (t.includes('{name}')) nameLines.push({ re: new RegExp('^' + t.split('{name}').map(esc).join('.+?') + '$'), audio: s.audio });
-        else if (!lineMap.has(t)) lineMap.set(t, s.audio);
+        const t = s.text.trim(), v = { audio: s.audio, say: s.say };
+        if (t.includes('{name}')) nameLines.push(Object.assign({ re: new RegExp('^' + t.split('{name}').map(esc).join('.+?') + '$') }, v));
+        else if (!lineMap.has(t)) lineMap.set(t, v);
       };
       (window.TT_VOICE_LINES || []).forEach(add);
       (window.TT_VOICE_SAMPLES_EL || []).filter(s => s.in_game).forEach(add);
     }
     const t = String(text).trim();
-    if (lineMap.has(t)) return lineMap.get(t);
-    const hit = nameLines.find(n => n.re.test(t));
-    return hit && hit.audio;
+    return lineMap.get(t) || nameLines.find(n => n.re.test(t));
   };
+  const recorded = text => { const hit = lookup(text); return hit && hit.audio; };
   const player = new Audio();
   player.preload = 'auto';
   player.addEventListener('ended', () => { speaking = false; if (TT.music) TT.music.duck(false); });
@@ -94,7 +94,8 @@
     speak(text, spk, opts) {
       opts = opts || {};
       if (!opts.noRemember) { lastText = text; lastSpk = spk; }
-      const file = !opts.profile && !opts.forceSynth && recorded(text);
+      const hit = !opts.profile && !opts.forceSynth && lookup(text);
+      const file = hit && hit.audio;
       if (file && !(TT.state && TT.state.voiceOff)) {
         if (synth) synth.cancel();
         player.pause();
@@ -102,7 +103,7 @@
         player.playbackRate = TT.state && TT.state.voiceSlow ? 0.85 : 1;
         speaking = true;
         if (TT.music) TT.music.duck(true);
-        player.onerror = () => { speaking = false; player.onerror = null; this.speak(text, spk, Object.assign({}, opts, { profile: profile(spk) })); };
+        player.onerror = () => { speaking = false; player.onerror = null; this.speak(hit.say || text, spk, Object.assign({}, opts, { profile: profile(spk) })); };
         player.play().catch(() => { speaking = false; if (TT.music) TT.music.duck(false); });
         return;
       }

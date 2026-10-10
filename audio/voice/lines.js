@@ -223,6 +223,19 @@ window.TT_VOICE_LINES = [
   "voice": "재선 Jaesun"
  },
  {
+  "text": "옹기 사시오~! 옹기는 숨을 쉬는 그릇이라 된장, 간장 담기에 딱이라오.",
+  "audio": "audio/voice/potter_61d41f25.mp3?v=55a113b9",
+  "speaker": "potter",
+  "voice": "곽두필 Dupil",
+  "say": "옹기 사시오오! 옹기는 숨을 쉬는 그릇이라 된장, 간장 담기에 딱이라오."
+ },
+ {
+  "text": "흙으로 빚어 불에 구운, 우리 조상들의 지혜가 담긴 그릇이지!",
+  "audio": "audio/voice/potter_b40fd5e9.mp3?v=f7fae7e5",
+  "speaker": "potter",
+  "voice": "곽두필 Dupil"
+ },
+ {
   "text": "해시계 방향을 맞춰 주면 되겠다! 바로 옆 해시계를 조사해 보자. (⭐ 보너스 미션)",
   "audio": "audio/voice/device_d44fc6c1.mp3?v=22bc825c",
   "speaker": "device",
@@ -247,6 +260,43 @@ window.TT_VOICE_LINES = [
   "voice": "아찌 Azzi"
  },
  {
+  "text": "천 글자를 언제 다 외워... 벌써 머리가 빙글빙글 돌아!",
+  "audio": "audio/voice/boy_cfb2098e.mp3?v=ba731a93",
+  "speaker": "boy",
+  "voice": "시우 Siwoo"
+ },
+ {
+  "text": "쉬운 글자가 있으면 좋겠다~",
+  "audio": "audio/voice/boy_7bbbabf6.mp3?v=3e5daf96",
+  "speaker": "boy",
+  "voice": "시우 Siwoo",
+  "say": "쉬운 글자가 있으면 좋겠다아."
+ },
+ {
+  "text": "장독대에는 된장, 간장을 담근 항아리가 있단다.",
+  "audio": "audio/voice/grandma_b18c7e11.mp3?v=27f847d9",
+  "speaker": "grandma",
+  "voice": "순이 Sooni"
+ },
+ {
+  "text": "햇볕을 잘 받아야 맛있게 익지. 허허, 너도 한 숟갈 맛볼 테냐?",
+  "audio": "audio/voice/grandma_b89348e2.mp3?v=386e2661",
+  "speaker": "grandma",
+  "voice": "순이 Sooni"
+ },
+ {
+  "text": "여기는 장영실 나리의 작업장이에요!",
+  "audio": "audio/voice/apprentice_cd5862f9.mp3?v=7a117b26",
+  "speaker": "apprentice",
+  "voice": "경수 Kyungsoo"
+ },
+ {
+  "text": "나리께서 지금 아주 중요한 발명을 하고 계셔서 아무나 들어갈 수 없어요.",
+  "audio": "audio/voice/apprentice_36c59203.mp3?v=813e4fc4",
+  "speaker": "apprentice",
+  "voice": "경수 Kyungsoo"
+ },
+ {
   "text": "장영실...? 어디서 들어 본 이름인데! 나중에 다시 와 보자.",
   "audio": "audio/voice/device_273ad0bc.mp3?v=4bf1b3c3",
   "speaker": "device",
@@ -257,6 +307,60 @@ window.TT_VOICE_LINES = [
   "audio": "audio/voice/device_cdd4cdcf.mp3?v=070febe1",
   "speaker": "device",
   "voice": "로로 Roro"
+ },
+ {
+  "text": "전하께서 보내셨다고요? 나리께서 안에서 기다리고 계세요!",
+  "audio": "audio/voice/apprentice_9490d14b.mp3?v=0be11696",
+  "speaker": "apprentice",
+  "voice": "경수 Kyungsoo"
+ },
+ {
+  "text": "전하께서는 밤늦게까지 책을 읽으시느라 눈병이 나실 정도였다오.",
+  "audio": "audio/voice/official1_c1445fec.mp3?v=b64ff391",
+  "speaker": "official1",
+  "voice": "재준 Jaejun"
+ },
+ {
+  "text": "백성을 위한 일이라면 쉬지 않으시는 분이지.",
+  "audio": "audio/voice/official1_e47000dc.mp3?v=9583d2fb",
+  "speaker": "official1",
+  "voice": "재준 Jaejun"
+ },
+ {
+  "text": "전하께서는 농사짓는 백성을 위해 '농사직설'이라는 농사책도 펴내셨소.",
+  "audio": "audio/voice/official2_b4585268.mp3?v=ba1274a8",
+  "speaker": "official2",
+  "voice": "성호 Sungho"
+ },
+ {
+  "text": "우리 땅에 맞는 농사법을 농부들에게 직접 물어 모았다오.",
+  "audio": "audio/voice/official2_aae4187e.mp3?v=0fe9ac79",
+  "speaker": "official2",
+  "voice": "성호 Sungho"
+ },
+ {
+  "text": "\"가, 갸, 거, 겨...\" 말소리를 하나하나 나누어 보고 있소.",
+  "audio": "audio/voice/scholar_b_1d9807a5.mp3?v=74461d95",
+  "speaker": "scholar_b",
+  "voice": "일호 Ilho"
+ },
+ {
+  "text": "우리말 소리는 참으로 재미있구려!",
+  "audio": "audio/voice/scholar_b_7c10e7b8.mp3?v=7f7d7b3a",
+  "speaker": "scholar_b",
+  "voice": "일호 Ilho"
+ },
+ {
+  "text": "뚝딱뚝딱! 나리께서는 해시계, 물시계, 하늘을 관측하는 기구까지 못 만드시는 게 없어요.",
+  "audio": "audio/voice/helper_5970f26f.mp3?v=79f4511f",
+  "speaker": "helper",
+  "voice": "박창수 Changsu"
+ },
+ {
+  "text": "원래 신분이 낮으셨는데, 전하께서 그 재주를 알아보셨대요!",
+  "audio": "audio/voice/helper_53388a4d.mp3?v=c0f17874",
+  "speaker": "helper",
+  "voice": "박창수 Changsu"
  },
  {
   "text": "이건 '한자'라는 글자야. 이 시대엔 나라의 알림도 모두 한자로 썼대.",
@@ -485,6 +589,85 @@ window.TT_VOICE_LINES = [
   "audio": "audio/voice/sejong_0a8f9b20.mp3?v=47676925",
   "speaker": "sejong",
   "voice": "창배 Changbae"
+ },
+ {
+  "text": "어허, 연구 중이니 조용히 해 주시오.",
+  "audio": "audio/voice/scholar_e33b4daf.mp3?v=b1ed5b24",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "자음과 모음을 합치면 소리가 된다! 참 신기하지 않느냐?",
+  "audio": "audio/voice/scholar_1f56120c.mp3?v=d71732c6",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "전하께서 기뻐하셨다니 나도 기쁘구나.",
+  "audio": "audio/voice/scholar_95d0975c.mp3?v=1dcc2aa9",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "전하께서 보내신 아이로구나! 마침 잘 왔다.",
+  "audio": "audio/voice/scholar_57683b38.mp3?v=81dca3ec",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "우리는 사람이 말할 때 입과 혀가 어떻게 움직이는지 연구하고 있단다.",
+  "audio": "audio/voice/scholar_f35e0196.mp3?v=70782ac3",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "자, '그' 하고 소리 내 보거라. 혀뿌리가 목구멍을 막지 않느냐?",
+  "audio": "audio/voice/scholar_db37008d.mp3?v=8a6bff20",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok",
+  "say": "자, 그으, 하고 소리 내 보거라. 혀뿌리가 목구멍을 막지 않느냐?"
+ },
+ {
+  "text": "그렇지! 그래서 새 글자의 자음은 소리 낼 때의 모양을 본떠 만들었단다.",
+  "audio": "audio/voice/scholar_c1f59b72.mp3?v=7774815d",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "모음은 이 세상을 이루는 하늘, 땅, 사람을 본떠 만들었지.",
+  "audio": "audio/voice/scholar_376b932d.mp3?v=56cb6301",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "이제 가장 중요한 비밀이다. 자음과 모음을 합치면 소리가 된단다.",
+  "audio": "audio/voice/scholar_f6d2276f.mp3?v=21fb00d8",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "말로 듣는 것보다 직접 해 보는 게 낫겠지? 저기 글자 공방에서 글자를 만들어 보거라!",
+  "audio": "audio/voice/scholar_79e0cf41.mp3?v=5cc09944",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "훌륭하다! 자음과 모음을 합치는 원리를 깨쳤구나!",
+  "audio": "audio/voice/scholar_8da99020.mp3?v=a28eb86b",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "이 원리만 알면 몇 개의 글자로 세상의 거의 모든 말소리를 적을 수 있지.",
+  "audio": "audio/voice/scholar_9041201f.mp3?v=c292a8cc",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
+ },
+ {
+  "text": "어서 전하께 가서 알려 드리거라. 무척 기뻐하실 게다!",
+  "audio": "audio/voice/scholar_7442a02f.mp3?v=d145a3b0",
+  "speaker": "scholar",
+  "voice": "건석 Gunseok"
  },
  {
   "text": "지금은 바빠서... 미안하구나.",
@@ -736,6 +919,53 @@ window.TT_VOICE_LINES = [
   "text": "(방향키 / WASD 로 움직이고, 스페이스바로 말을 걸 수 있어!)",
   "audio": "audio/voice/device_f591fa23.mp3?v=29facef9",
   "speaker": "device",
-  "voice": "로로 Roro"
+  "voice": "로로 Roro",
+  "say": "방향키나 W, A, S, D 로 움직이고, 스페이스바로 말을 걸 수 있어!"
+ },
+ {
+  "text": "🗣️ 자음(닿소리)의 비밀 ㄱ혀뿌리가 목구멍을 막는 모양 ㄴ혀끝이 윗잇몸에 닿는 모양 ㅁ입 모양 ㅅ이(치아) 모양 ㅇ목구멍 모양 여기에 획을 더하면 ㅋ, ㄷ, ㅂ, ㅈ, ㅎ 같은 글자가 생겨요!",
+  "audio": "audio/voice/narrator_b212d448.mp3?v=bdba0775",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung",
+  "say": "자음, 닿소리의 비밀. 기역은 혀뿌리가 목구멍을 막는 모양. 니은은 혀끝이 윗잇몸에 닿는 모양. 미음은 입 모양. 시옷은 이, 그러니까 치아 모양. 이응은 목구멍 모양. 여기에 획을 더하면 키읔, 디귿, 비읍, 지읒, 히읗 같은 글자가 생겨요!"
+ },
+ {
+  "text": "☀️ 모음(홀소리)의 비밀 ·둥근 하늘 ㅡ평평한 땅 ㅣ서 있는 사람 이 셋을 합쳐 ㅏ, ㅓ, ㅗ, ㅜ 같은 모음을 만들어요.예) ㅣ + · = ㅏ",
+  "audio": "audio/voice/narrator_03a0823a.mp3?v=11a34709",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung",
+  "say": "모음, 홀소리의 비밀. 둥근 점은 둥근 하늘. 모음 으는 평평한 땅. 모음 이는 서 있는 사람. 이 셋을 합쳐 아, 어, 오, 우 같은 모음을 만들어요. 예를 들어, 이에 둥근 점을 더하면 아가 돼요."
+ },
+ {
+  "text": "첫 번째 비밀: 소리 합치기. 자음 <b>ㄱ</b> 을 누르고, 모음 <b>ㅏ</b> 를 눌러 합쳐 보세요!",
+  "audio": "audio/voice/narrator_5635ce23.mp3?v=d5fd895c",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung",
+  "say": "첫 번째 비밀, 소리 합치기. 자음 기역을 누르고, 모음 아를 눌러 합쳐 보세요!"
+ },
+ {
+  "text": "그림 글자 만들기. 그림의 이름을 글자로 만들어 보세요!",
+  "audio": "audio/voice/narrator_d86b826e.mp3?v=0284be47",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung"
+ },
+ {
+  "text": "그림 글자 만들기. 이번엔 팔랑팔랑 날아다니는 친구!",
+  "audio": "audio/voice/narrator_6329d793.mp3?v=a6697368",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung"
+ },
+ {
+  "text": "두 번째 비밀: 모음 바꾸기. <b>ㅁ</b> 하나로 세 가지 소리를! 모음만 바꿔 보세요.",
+  "audio": "audio/voice/narrator_e76fe13c.mp3?v=1a8f10cc",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung",
+  "say": "두 번째 비밀, 모음 바꾸기. 미음 하나로 세 가지 소리를! 모음만 바꿔 보세요."
+ },
+ {
+  "text": "마지막 도전. 세 글자에 도전! 노랗고 길쭉한 과일이에요.",
+  "audio": "audio/voice/narrator_864533f3.mp3?v=9b6dcc7c",
+  "speaker": "narrator",
+  "voice": "한영 Hanyoung"
  }
 ];
